@@ -196,84 +196,128 @@
     </section>
   </main>
   <footer>
-    <article>
-      <ul>
-        <li>
-          <a href="#">COMPANY</a>
-          <ul>
-            <li><a href="#">한눈에 보기</a></li>
-            <li><a href="#">스타벅스 사명</a></li>
-            <li><a href="#">스타벅스 소개</a></li>
-            <li><a href="#">국내 뉴스룸</a></li>
-            <li><a href="#">세계의 스타벅스</a></li>
-            <li><a href="#">글로벌 뉴스룸</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">CORPORATE SALES</a>
-          <ul>
-            <li><a href="#">단체 및 기업 구매 안내</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">PARTNERSHIP</a>
-          <ul>
-            <li><a href="#">신규 입점 제의</a></li>
-            <li><a href="#">협력 고객사 등록신청</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">ONLINE COMMUNITY</a>
-          <ul>
-            <li><a href="#">페이스북</a></li>
-            <li><a href="#">트위터</a></li>
-            <li><a href="#">유튜브</a></li>
-            <li><a href="#">인스타그램</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">RECRUIT</a>
-          <ul>
-            <li><a href="#">채용 소개</a></li>
-            <li><a href="#">채용 지원하기</a></li>
-          </ul>
-        </li>
-      </ul>
-    </article>
-    <article>
-      <ul>
-        <li>
-          <a href="#" target="_blank">
-            <img src="../images/award_1.jpeg" alt="여성가족부 2020 대한민국 일자리대상 여성가족부장관상">
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">
-            <img src="../images/award_2.jpeg" alt="행정안전부 2020 소방의 날 행정안전부장관 표창">
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">
-            <img src="../images/award_3.jpeg" alt="농림축산식품부 2020 대한민국 커피산업대상 농림축산식품부 장관상">
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">
-            <img src="../images/award_4.jpeg" alt="산업통상자원부 2020 대한민국 중소중견기업혁신 대상 국회산업통상자원중소벤처위원회장상">
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">
-            <img src="../images/award_5.jpeg" alt="일자리위원회 2020 대한민국 일자리 유공 표창 대통령직속 일자리위원회 부위원장상">
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">
-            <img src="../images/award_6.jpeg" alt="동반성장위원회 2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상">
-          </a>
-        </li>
-      </ul>
-    </article>
+    <!-- Q4. 대부분 다른 페이지들도 보면 footer 안에 container처럼 css를 위해서 감싸는 요소를 하나씩 넣던데 푸터에도 넣게되면 이유가 궁금합니다. main의 경우에는 섹션이 많아서인가 싶은데 푸터의 경우에는 적다면 그냥 footer태그에 여백을 걸어도 될지..?! -->
+    <div class="wrapper">
+      <!-- Q5. 뭔가 단계적으로라면 여기에 h2가 들어가고 아래에 h3로 각각 헤딩을 달아줘야 할 것 같은데, h2에 넣기엔 적절한 텍스트가 생각나지 않습니다..ㅜ -->
+      <h2></h2>
+      <!-- footer 1 -->
+      <article class="pages">
+        <h3 class="sr-only">관련 페이지</h3>
+        <ul>
+          <li>
+            <a href="#">COMPANY</a>
+            <ul>
+              <li><a href="#">한눈에 보기</a></li>
+              <li><a href="#">스타벅스 사명</a></li>
+              <li><a href="#">스타벅스 소개</a></li>
+              <li><a href="#">국내 뉴스룸</a></li>
+              <li><a href="#">세계의 스타벅스</a></li>
+              <li><a href="#">글로벌 뉴스룸</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">CORPORATE SALES</a>
+            <ul>
+              <li><a href="#">단체 및 기업 구매 안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">PARTNERSHIP</a>
+            <ul>
+              <li><a href="#">신규 입점 제의</a></li>
+              <li><a href="#">협력 고객사 등록신청</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">ONLINE COMMUNITY</a>
+            <ul>
+              <li><a href="#">페이스북</a></li>
+              <li><a href="#">트위터</a></li>
+              <li><a href="#">유튜브</a></li>
+              <li><a href="#">인스타그램</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">RECRUIT</a>
+            <ul>
+              <li><a href="#">채용 소개</a></li>
+              <li><a href="#">채용 지원하기</a></li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+      <!-- // footer 1 -->
+      <!-- footer 2 -->
+      <article class="awards">
+        <h3 class="sr-only">수상 경력</h3>
+        <ul>
+          <li>
+            <a href="#" target="_blank">
+              <img src="../images/award_1.jpeg" alt="여성가족부 2020 대한민국 일자리대상 여성가족부장관상">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="../images/award_2.jpeg" alt="행정안전부 2020 소방의 날 행정안전부장관 표창">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="../images/award_3.jpeg" alt="농림축산식품부 2020 대한민국 커피산업대상 농림축산식품부 장관상">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="../images/award_4.jpeg" alt="산업통상자원부 2020 대한민국 중소중견기업혁신 대상 국회산업통상자원중소벤처위원회장상">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="../images/award_5.jpeg" alt="일자리위원회 2020 대한민국 일자리 유공 표창 대통령직속 일자리위원회 부위원장상">
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="../images/award_6.jpeg" alt="동반성장위원회 2020 사랑나눔 사회공헌대상 동반성장위원회 위원장상">
+            </a>
+          </li>
+        </ul>
+      </article>
+      <!-- // footer 2 -->
+      <!-- footer 3 -->
+      <section>
+        <h3 class="sr-only">운영 방침 및 이용 약관</h3>
+        <ul>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">영상정보처리기기 운영관리 방침</a></li>
+          <li><a href="#">홈페이지 이용약관</a></li>
+          <li><a href="#">위치정보 이용약관</a></li>
+          <li><a href="#">스타벅스 카드 이용약관</a></li>
+          <li><a href="#">비회원 이용약관</a></li>
+          <li><a href="#">My DT Pass 서비스 이용약관</a></li>
+          <li><a href="#">윤리경영 핫라인</a></li>
+        </ul>
+        <div>
+          <a href="#" target="_blank" rel="noopener noreferrer">찾아오시는 길</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">신규입점제의</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">사이트 맵</a>
+        </div>
+        <address>
+          <dl>
+            <dt>사업자등록번호</dt>
+            <dd>201-81-21515</dd>
+            <dt>(주)스타벅스커피 코리아 대표이사</dt>
+            <dd>송 데이비드 호섭</dd>
+            <dt>TEL</dt>
+            <dd>1522-3232</dd>
+            <dt>개인정보 책임자</dt>
+            <dd>하익성</dd>
+          </dl>
+          <p>&copy; 2021 Starbucks Coffee Company. All Rights Reserved.</p>
+        </address>
+      </section>
+      <!-- // footer 3 -->
+    </div>
   </footer>
 </body>
 
