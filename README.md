@@ -1,6 +1,8 @@
 # clone_starbucks
 
-💚 스타벅스 코리아 홈페이지 클론 프로젝트입니다. [링크](https://www.starbucks.co.kr)
+💚 스타벅스 코리아 홈페이지 클론 프로젝트입니다.
+[🔗 공식 홈페이지](https://www.starbucks.co.kr)
+[🔗 Github Page](https://nurimeansworld.github.io/clone_starbucks/)
 
 ## 순서
 
