@@ -17,7 +17,6 @@
   </div>
   <header>
     <section id="gnb" class="wrapper">
-      <!-- Q1. 로고처리 우선 수업시간에 배운대로 하려고 마크업 이렇게 했는데 다른 분들은 어떻게 하셨을지 궁금합니다 -->
       <!-- logo -->
       <h1>
         <a href="/index.html">
@@ -34,46 +33,45 @@
           <li><a href="#">Find a Store</a></li>
         </ul>
         <form action="GET">
-          <label for="main-search">통합검색</label>
-          <input type="text" id="main-search">
+          <!-- CHECK:: label이랑 placeholder랑 스크린리더기가 중복으로 읽을 수 있으니 확인 -->
+          <label for="main-search" class="sr-only">통합검색</label>
+          <input type="text" id="main-search" placeholder="통합검색">
           <button type="submit">search</button>
         </form>
+        <!-- GNB -->
+        <ul>
+          <li><a href="#">COFFEE</a></li>
+          <li>
+            <a href="#">MENU</a>
+            <ul>
+              <li>
+                <a href="#">푸드</a>
+                <ul>
+                  <li><a href="#">브레드</a></li>
+                  <li><a href="#">케이크</a></li>
+                  <li><a href="#">샌드위치 & 샐러드</a></li>
+                  <li><a href="#">따뜻한 푸드</a></li>
+                  <li><a href="#">과일 & 요거트</a></li>
+                  <li><a href="#">스낵 & 미니 디저트</a></li>
+                  <li><a href="#">아이스크림</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">STORE</a></li>
+          <li><a href="#">RESPONSIBILITY</a></li>
+          <li><a href="#">NUTARBUCKS REWARDS</a></li>
+          <li><a href="#">WHAT'S NEW</a></li>
+        </ul>
+        <!-- // GNB -->
       </nav>
       <!-- // sub menu -->
-      <!-- GNB -->
-      <ul>
-        <li><a href="#">COFFEE</a></li>
-        <li>
-          <!-- Q2. 누타벅스 공홈은 여길 h2로 했던데 저는 이게 중요한 내용이긴 한데 헤딩은 아니라 생각해서 a태그로 넣었는데 다른 분들은 어떠실지 궁금합니다 -->
-          <a href="#">MENU</a>
-          <!-- <ul>
-            <li>
-              <a href="#">푸드</a>
-              <ul>
-                <li><a href="#">브레드</a></li>
-                <li><a href="#">케이크</a></li>
-                <li><a href="#">샌드위치 & 샐러드</a></li>
-                <li><a href="#">따뜻한 푸드</a></li>
-                <li><a href="#">과일 & 요거트</a></li>
-                <li><a href="#">스낵 & 미니 디저트</a></li>
-                <li><a href="#">아이스크림</a></li>
-              </ul>
-            </li>
-          </ul> -->
-        </li>
-        <li><a href="#">STORE</a></li>
-        <li><a href="#">RESPONSIBILITY</a></li>
-        <li><a href="#">NUTARBUCKS REWARDS</a></li>
-        <li><a href="#">WHAT'S NEW</a></li>
-      </ul>
-      <!-- // GNB -->
     </section>
   </header>
   <main>
 
     <section class="container">
       <!-- page title -->
-      <!-- Q3. article과 section... 떼어서 쓸 수 있는 부분이면 article이라 생각해서 모듈화 가능한 부분이라 이해하고 사용했는데 다른 분들은 어떻게 사용하셨는지 궁금합니다 -->
       <article class="title">
         <h2>푸드</h2>
         <ul class="breadcrumbs">
@@ -96,14 +94,15 @@
           </section>
           <!-- 1. 카테고리 -->
           <section>
-            <label for="food_all"><input type="checkbox" id="food_all">전체 상품보기</label>
-            <label for="food_bread"><input type="checkbox" id="food_bread">브레드</label>
-            <label for="food_cake"><input type="checkbox" id="food_cake">케이크</label>
-            <label for="food_sandsalad"><input type="checkbox" id="food_sandsalad">샌드위치 & 샐러드</label>
-            <label for="food_food"><input type="checkbox" id="food_food">따뜻한 푸드</label>
-            <label for="food_fruit"><input type="checkbox" id="food_fruit">과일 & 요거트</label>
-            <label for="food_snack"><input type="checkbox" id="food_snack">스낵 & 미니 디저트</label>
-            <label for="food_icecream"><input type="checkbox" id="food_icecream">아이스크림</label>
+            <!-- CHECK:: label안에 input을 넣으면 for를 생략가능 -->
+            <label><input type="checkbox" id="food_all">전체 상품보기</label>
+            <label><input type="checkbox" id="food_bread">브레드</label>
+            <label><input type="checkbox" id="food_cake">케이크</label>
+            <label><input type="checkbox" id="food_sandsalad">샌드위치 & 샐러드</label>
+            <label><input type="checkbox" id="food_food">따뜻한 푸드</label>
+            <label><input type="checkbox" id="food_fruit">과일 & 요거트</label>
+            <label><input type="checkbox" id="food_snack">스낵 & 미니 디저트</label>
+            <label><input type="checkbox" id="food_icecream">아이스크림</label>
           </section>
           <!-- 1. // 카테고리 -->
           <!-- 2. 테마 -->
@@ -125,20 +124,21 @@
           <section>
             <h4 class="sr-only">상세 분류 보기</h4>
             <ul>
-              <li>사진으로 보기</li>
-              <li>영양정보로 보기</li>
+              <li><a href="#">사진으로 보기</a></li>
+              <li><a href="#">영양정보로 보기</a></li>
             </ul>
-            <article>
+            <!-- CHECK:: article 보다 div. 단순 레이아웃 용이라면! -->
+            <div>
               <button type="button">상세분류</button>
               <ul>
                 <li>
-                  <label for="checkbox1"><input type="checkbox" id="checkbox1">신규 출시된 메뉴</label>
+                  <label><input type="checkbox" id="checkbox1">신규 출시된 메뉴</label>
                 </li>
                 <li>
-                  <label for="checkbox2"><input type="checkbox" id="checkbox2">한정기간 출시되는 시즌성 메뉴</label>
+                  <label><input type="checkbox" id="checkbox2">한정기간 출시되는 시즌성 메뉴</label>
                 </li>
               </ul>
-            </article>
+            </div>
           </section>
           <!-- 1. 사진으로 보기 -->
           <section id="viewPhoto">
@@ -148,12 +148,11 @@
               <h5>브레드</h5>
               <ul>
                 <li>
-                  <article>
-                    <a href="#">
-                      <img src="../images/bread_1.jpeg" alt="치즈 그린 어니언 브레드">
-                    </a>
-                    <p>치즈 그린 어니언 브레드</p>
-                  </article>
+                  <a href="#">
+                    <img src="../images/bread_1.jpeg" alt="치즈 그린 어니언 브레드">
+                    <!-- CHECK:: new 를 가상요소 혹은 img 로 추가 -->
+                  </a>
+                  <p>치즈 그린 어니언 브레드</p>
                 </li>
                 <li>
                   <article>
@@ -329,10 +328,8 @@
 
   </main>
   <footer>
-    <!-- Q4. 대부분 다른 페이지들도 보면 footer 안에 container처럼 css를 위해서 감싸는 요소를 하나씩 넣던데 푸터에도 넣게되면 이유가 궁금합니다. main의 경우에는 섹션이 많아서인가 싶은데 푸터의 경우에는 적다면 그냥 footer태그에 여백을 걸어도 될지..?! -->
     <div class="wrapper">
-      <!-- Q5. 뭔가 단계적으로라면 여기에 h2가 들어가고 아래에 h3로 각각 헤딩을 달아줘야 할 것 같은데, h2에 넣기엔 적절한 텍스트가 생각나지 않습니다..ㅜ -->
-      <!-- <h2>푸터</h2> -->
+      <h2 class="sr-only">기업정보</h2>
       <!-- footer 1 -->
       <article class="pages">
         <h3 class="sr-only">관련 페이지</h3>
@@ -435,19 +432,20 @@
           <a href="#" target="_blank" rel="noopener noreferrer">신규입점제의</a>
           <a href="#" target="_blank" rel="noopener noreferrer">사이트 맵</a>
         </div>
-        <address>
+        <!-- CHECK:: address 태그 안에는 전화번호만 있어야 한다 -->
+        <div>
           <dl>
-            <dt>사업자등록번호</dt>
+            <dt>사업자등록번호 :</dt>
             <dd>000-00-00000</dd>
-            <dt>(주)누타벅스커피 코리아 대표이사</dt>
+            <dt>(주)누타벅스커피 코리아 대표이사 :</dt>
             <dd>박 행복한 누리</dd>
-            <dt>TEL</dt>
+            <dt>TEL :</dt>
             <dd>9999-9999</dd>
-            <dt>개인정보 책임자</dt>
+            <dt>개인정보 책임자 :</dt>
             <dd>박두리</dd>
           </dl>
           <p>&copy; 2021 Nutarbucks Coffee Company. All Rights Reserved.</p>
-        </address>
+        </div>
       </section>
       <!-- // footer 3 -->
     </div>
