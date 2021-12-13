@@ -1,0 +1,122 @@
+@charset "utf-8";
+@import url("utility.css");
+
+/* font */
+@font-face {
+  font-family: NanumBarunGothic;
+  src: url("../fonts/NanumBarunGothic.ttf") format("truetype");
+}
+@font-face {
+  font-family: NanumBarunGothicBold;
+  src: url("../font/NanumBarunGothicBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: NanumBarunGothicLight;
+  src: url("../font/NanumBarunGothicLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: NanumBarunGothicExtraLight;
+  src: url("../font/NanumBarunGothicExtraLight.ttf") format("truetype");
+}
+
+/* :root {
+  --bg-color: #eae8fe;
+  --point-color: #6327fe;
+} */
+
+/* style */
+body {
+  font-family: "NanumBarunGothic", "맑은 고딕", "HelveticaNeue";
+}
+
+/* 헤더 */
+.header {
+  background: #f6f5ef;
+  border-top: 2px solid black;
+  border-bottom: 1px solid #e5e5e5;
+}
+.header-wrap {
+  margin: 0 170px;
+  height: 120px;
+}
+.logo {
+  position: absolute;
+  top: 22px;
+  width: 75px;
+  /* height: 75px; */
+}
+
+.menu {
+  float: right;
+  font: normal 13px Avenir, Arial, georgia;
+}
+.menu-side {
+  margin-top: 15px;
+  display: flex;
+  justify-content: end;
+}
+.menu-side__list {
+  display: flex;
+}
+.menu-side__list li {
+  padding: 0 10px;
+}
+.menu-side__list a {
+  color: #555;
+}
+.menu-side__search input {
+  display: none;
+}
+.menu-side__search button {
+  width: 34px;
+  height: 34px;
+  top: 10px;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* CHECK:: background-image 속성을 한 줄로 줄이면 어떻게 될까요..? 자꾸 에러가떠요ㅠㅠ */
+  background-image: url("../images/icon_search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-image: url("../images/icon_search.png") no-repeat center; */
+}
+
+.menu-global {
+  margin-top: 19px;
+  display: flex;
+}
+.menu-global li {
+  /* CHECK:: 24px 눈대중으로 하였는데... 이게 맞을지.. */
+  padding: 10px 24px 0;
+  text-align: center;
+  line-height: 20px;
+}
+.menu-global a {
+  display: block;
+  height: 60px;
+  color: #333;
+}
+
+/* 본문 */
+.container {
+  margin: 0 170px;
+}
+.breadcrumbs {
+  height: 80px;
+}
+.breadcrumbs__home {
+  position: relative;
+  top: 30px;
+  /* top: 30%; */
+  font-size: 28px;
+  font-weight: bold;
+}
+.breadcrumbs__list {
+  float: right;
+  font-size: 12px;
+}
+.breadcrumbs__item {
+  float: left;
+}
+/* media query */

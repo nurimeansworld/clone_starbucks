@@ -125,7 +125,7 @@ img {
   display: block;
   width: 100%;
 }
-/* utility */
+/* custom */
 .sr-only {
   position: absolute;
   overflow: hidden;
@@ -135,4 +135,9 @@ img {
   margin: -1px;
   border: 0;
   padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
