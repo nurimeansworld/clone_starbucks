@@ -1,4 +1,8 @@
 @charset "utf-8";
+
+/* CHECK:: 하면서 드는 생각.. 전체적인 작업을 먼저 하고 디테일을 잡는게 좋을까 아님 우선 대략적이라도 틀을 잡고 세부수정하는게 좋을까... */
+/* CHECK:: 왜 이렇게 클래스별로 자잘자잘하게 속성을 넣게 될까.. */
+
 @import url("utility.css");
 
 /* font */
@@ -29,7 +33,7 @@ body {
   font-family: "NanumBarunGothic", "맑은 고딕", "HelveticaNeue";
 }
 
-/* 헤더 */
+/* header */
 .header {
   background: #f6f5ef;
   border-top: 2px solid black;
@@ -46,6 +50,7 @@ body {
   /* height: 75px; */
 }
 
+/* header - menu */
 .menu {
   float: right;
   font: normal 13px Avenir, Arial, georgia;
@@ -81,6 +86,8 @@ body {
   background-position: center;
   /* background-image: url("../images/icon_search.png") no-repeat center; */
 }
+.menu-side__layer {
+}
 
 .menu-global {
   margin-top: 19px;
@@ -98,25 +105,182 @@ body {
   color: #333;
 }
 
-/* 본문 */
+/* main */
 .container {
-  margin: 0 170px;
+  width: 1100px;
+  margin: 0 auto;
 }
 .breadcrumbs {
-  height: 80px;
+  height: 90px;
+  position: relative;
 }
 .breadcrumbs__home {
   position: relative;
   top: 30px;
   /* top: 30%; */
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
 }
 .breadcrumbs__list {
   float: right;
+  position: absolute;
+  right: 0;
+  top: 60px;
   font-size: 12px;
 }
 .breadcrumbs__item {
   float: left;
+}
+.breadcrumbs__item::after {
+}
+.breadcrumbs__list.item-home {
+  width: 15px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  background-image: url("../images/icon_home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* content */
+.content {
+}
+.content.pageFood {
+}
+
+.product-accordion {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.product-accordion__title {
+}
+.product-accordion__button {
+}
+.product-accordion__menu {
+}
+.product-accordion__menu img {
+  width: 335px;
+}
+.product-accordion__menuTab {
+}
+.product-accordion__menuCat {
+}
+.product-accordion__menuTheme {
+  /* display: none; */
+}
+.menuTheme-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-content {
+  position: relative;
+}
+.product-content__menu {
+  background: green;
+}
+.product-content__menuTab {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #666;
+}
+.product-content__menuSelect {
+  position: absolute;
+  right: 0;
+  width: 236px;
+  background: grey;
+}
+
+/* 제품 리스트 */
+.product-content__result {
+}
+.result-section {
+  margin-bottom: 40px;
+}
+.result-section__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+
+  padding: 20px;
+  background: #f4f4f2;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.result-section__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* CHECK:: 공식 사이트는 margin 10px 씩 넣었는데 어떻게 가운데 정렬이 되었는지.. */
+.result-section__item {
+  margin: 0 8px 20px 8px;
+}
+.result-section__item a {
+}
+.result-section__item img {
+  width: 258px;
+}
+.result-section__item p {
+  height: 54px;
+  line-height: 54px;
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+}
+.product-content__result table {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+.product-content__result th {
+  padding: 16px 0;
+  font-weight: bold;
+  color: #222;
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+}
+.product-content__result td {
+  padding: 16px 0;
+  color: #666;
+  border-bottom: 1px solid #ddd;
+}
+/* 사진으로 보기 */
+.product-content__result.photo {
+}
+/* 영양정보로 보기 */
+.product-content__result.ingredients {
+}
+
+/* footer */
+.footer {
+}
+.footer-wrap {
+}
+.footer-pages {
+}
+.footer-pages__list {
+}
+.footer-pages__item {
+}
+
+.footer-awards {
+}
+.footer-awards__list {
+}
+.footer-awards__item {
+}
+
+.footer-info {
+}
+.footer-info__termsList {
+}
+.footer-info__linkList {
+}
+.footer-info__address {
+}
+.footer-info__copyright {
 }
 /* media query */
