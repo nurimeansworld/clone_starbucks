@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-/* CHECK:: 하면서 드는 생각.. 전체적인 작업을 먼저 하고 디테일을 잡는게 좋을까 아님 우선 대략적이라도 틀을 잡고 세부수정하는게 좋을까... */
-/* CHECK:: 왜 이렇게 클래스별로 자잘자잘하게 속성을 넣게 될까.. */
-
 @import url("utility.css");
 
 /* font */
@@ -29,6 +26,14 @@
 } */
 
 /* style */
+/* NEW:: css 작업 시작 때 box-sizing으로 설정하는 것이 좋다 */
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
   font-family: "NanumBarunGothic", "맑은 고딕", "HelveticaNeue";
 }
@@ -40,7 +45,8 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 .header-wrap {
-  margin: 0 170px;
+  width: 1100px;
+  margin: 0 auto;
   height: 120px;
 }
 .logo {
@@ -80,11 +86,7 @@ body {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
-  /* CHECK:: background-image 속성을 한 줄로 줄이면 어떻게 될까요..? 자꾸 에러가떠요ㅠㅠ */
-  background-image: url("../images/icon_search.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  /* background-image: url("../images/icon_search.png") no-repeat center; */
+  background: url(../images/icon_search.png) no-repeat center #fff;
 }
 .menu-side__layer {
 }
@@ -94,7 +96,6 @@ body {
   display: flex;
 }
 .menu-global li {
-  /* CHECK:: 24px 눈대중으로 하였는데... 이게 맞을지.. */
   padding: 10px 24px 0;
   text-align: center;
   line-height: 20px;
@@ -166,6 +167,7 @@ body {
 .product-accordion__menuTab {
 }
 .product-accordion__menuCat {
+  /* NEW:: checkbox와 정렬 맞출 때 position: relative 사용해보기 */
 }
 .product-accordion__menuTheme {
   /* display: none; */
@@ -214,7 +216,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-/* CHECK:: 공식 사이트는 margin 10px 씩 넣었는데 어떻게 가운데 정렬이 되었는지.. */
 .result-section__item {
   margin: 0 8px 20px 8px;
 }
