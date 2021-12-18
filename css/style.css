@@ -20,11 +20,6 @@
   src: url("../font/NanumBarunGothicExtraLight.ttf") format("truetype");
 }
 
-/* :root {
-  --bg-color: #eae8fe;
-  --point-color: #6327fe;
-} */
-
 /* style */
 /* NEW:: css 작업 시작 때 box-sizing으로 설정하는 것이 좋다 */
 * {
@@ -58,7 +53,6 @@ body {
   position: absolute;
   top: 22px;
   width: 75px;
-  /* height: 75px; */
 }
 
 /* header - menu */
@@ -117,6 +111,7 @@ body {
   color: #669900;
   text-decoration: underline;
 }
+
 /* main */
 .container {
   padding-top: 120px;
@@ -125,21 +120,14 @@ body {
 }
 .breadcrumbs {
   height: 90px;
-  /* position: relative; */
 }
 .breadcrumbs__home {
-  /* position: relative; */
-  /* top: 30px; */
-  /* top: 30%; */
   padding-top: 30px;
   font-size: 30px;
   font-weight: bold;
 }
 .breadcrumbs__list {
   float: right;
-  /* position: absolute; */
-  /* right: 0; */
-  /* top: 60px; */
   font-size: 12px;
 }
 .breadcrumbs__item {
@@ -147,12 +135,10 @@ body {
 }
 .breadcrumbs__item a {
   color: #666;
-  /* vertical-align: middle; */
 }
 .breadcrumbs__item ~ li::before {
   content: ">";
   margin: 0 5px;
-  /* display: block; */
 }
 .breadcrumbs__item.item-home {
   width: 15px;
@@ -175,20 +161,20 @@ body {
   border-radius: 5px;
 }
 .product-accordion__title {
-  font-size: 18px;
-  font-weight: bold;
   padding-bottom: 30px;
   border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
 }
 .product-accordion__button {
-  background: transparent;
   position: absolute;
   top: 15px;
   right: 30px;
-  border-style: none;
   width: 42px;
   height: 42px;
   cursor: pointer;
+  border-style: none;
+  background: transparent;
 }
 .product-accordion__menu {
   padding: 30px 0 0 0;
@@ -249,17 +235,17 @@ body {
 }
 .product-content__menuTab {
   display: flex;
+  margin: 40px 0 10px 0;
   border-radius: 3px;
   color: #666;
-  margin: 40px 0 10px 0;
 }
 .product-content__menuTab li {
+  padding: 0 9px 0 25px;
+  margin-right: 15px;
   line-height: 26px;
   font-size: 12px;
   border: 1px solid #ddd;
   border-radius: 3px;
-  padding: 0 9px 0 25px;
-  margin-right: 15px;
 }
 .viewPhoto {
   background: url(../images/icon_pic.png) no-repeat 8px;
@@ -283,15 +269,15 @@ body {
   width: 236px;
 }
 .product-content__menuSelect .menuSelect-btn {
+  padding: 0 10px;
   width: 100%;
-  border-style: none;
+  text-align: left;
   font-size: 14px;
   color: #444;
+  border-style: none;
   border: 1px solid #ddd;
   border-radius: 3px;
   height: 38px;
-  text-align: left;
-  padding: 0 10px;
   overflow: hidden;
   background: #fff url(../images/sbox_arrow_down.png) no-repeat right 10px;
 }
@@ -332,8 +318,8 @@ body {
   height: 54px;
   line-height: 54px;
   font-size: 14px;
-  color: #444;
   text-align: center;
+  color: #444;
 }
 .product-content__result table {
   width: 100%;
@@ -361,11 +347,9 @@ body {
 
 /* footer */
 .footer {
-  background: #2c2a29;
-  clear: both;
   padding: 32px 0 35px 0;
-  /* position: relative; */
-  /* width: 100%; */
+  clear: both;
+  background: #2c2a29;
 }
 .footer-wrap {
   width: 1182px;
@@ -377,9 +361,9 @@ body {
 }
 .footer-pages__list:last-child:after {
   width: 14px;
+  margin-left: 65px;
   content: "";
   display: block;
-  margin-left: 65px;
   background: url(../images/footer_logo.png) no-repeat;
 }
 .footer-pages__item {
@@ -393,7 +377,6 @@ body {
   line-height: 24px;
 }
 .footer-pages__item .itemTitle {
-  /* color: #fff; */
   font-size: 14px;
   line-height: 40px;
 }
@@ -416,36 +399,32 @@ body {
   font-size: 12px;
 }
 .footer-info__termsList {
-  /* border: 1px solid #ccc; */
-
   display: flex;
   justify-content: center;
   margin: 30px auto 0;
 }
 .footer-info__termsList a {
-  color: #ccc;
+  padding: 0 10px;
   line-height: 18px;
   border-right: 1px solid #393939;
-  padding: 0 10px;
+  color: #ccc;
 }
 .footer-info__termsList li:first-child a {
   color: #00b050;
 }
 .footer-info__linkList {
-  /* border: 1px solid #fff; */
   margin: 0 0 10px 0;
 }
 .footer-info__linkList a {
   display: inline-block;
-  color: #fff;
-  line-height: 30px;
-  border: 2px solid #fff;
-  border-radius: 3px;
   margin: 10px 4px 0 4px;
   width: 93px;
+  line-height: 30px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 3px;
 }
 .footer-info__address {
-  /* border: 1px solid #999; */
   display: flex;
   justify-content: center;
   padding: 15px 0;
