@@ -43,6 +43,11 @@ body {
   background: #f6f5ef;
   border-top: 2px solid black;
   border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 .header-wrap {
   width: 1100px;
@@ -108,40 +113,47 @@ body {
 
 /* main */
 .container {
+  padding-top: 120px;
   width: 1100px;
   margin: 0 auto;
 }
 .breadcrumbs {
   height: 90px;
-  position: relative;
+  /* position: relative; */
 }
 .breadcrumbs__home {
-  position: relative;
-  top: 30px;
+  /* position: relative; */
+  /* top: 30px; */
   /* top: 30%; */
+  padding-top: 30px;
   font-size: 30px;
   font-weight: bold;
 }
 .breadcrumbs__list {
   float: right;
-  position: absolute;
-  right: 0;
-  top: 60px;
+  /* position: absolute; */
+  /* right: 0; */
+  /* top: 60px; */
   font-size: 12px;
 }
 .breadcrumbs__item {
   float: left;
 }
-.breadcrumbs__item::after {
+.breadcrumbs__item a {
+  color: #666;
+  /* vertical-align: middle; */
 }
-.breadcrumbs__list.item-home {
+.breadcrumbs__item ~ li::before {
+  content: ">";
+  margin: 0 5px;
+  /* display: block; */
+}
+.breadcrumbs__item.item-home {
   width: 15px;
   height: 15px;
   display: block;
-  position: absolute;
-  background-image: url("../images/icon_home.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-top: -3px;
+  background: url("../images/icon_home.png") center no-repeat;
 }
 
 /* content */
@@ -151,32 +163,78 @@ body {
 }
 
 .product-accordion {
+  position: relative;
   padding: 30px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 .product-accordion__title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ddd;
 }
 .product-accordion__button {
+  background: transparent;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  border-style: none;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
 }
 .product-accordion__menu {
+  padding: 30px 0 0 0;
 }
 .product-accordion__menu img {
   width: 335px;
 }
 .product-accordion__menuTab {
 }
+.product-accordion__menuTab button {
+  width: 200px;
+  line-height: 35px;
+  border-radius: 3px;
+
+  background: #f4f4f1;
+  color: #222;
+  font-size: 14px;
+  border-style: none;
+}
+.product-accordion__menuTab button ~ button {
+  margin: 0 10px;
+}
+.product-accordion__menuTab .active {
+  background: #006633;
+  color: #fff;
+}
+/* CHECK:: 체크박스 스타일링 */
 .product-accordion__menuCat {
+  /* display: none; */
   /* NEW:: checkbox와 정렬 맞출 때 position: relative 사용해보기 */
+  margin: 20px 0;
+  font-size: 14px;
+}
+.product-accordion__menuCat label {
+  color: #3f4141;
+  margin-right: 30px;
+}
+.product-accordion__menuCat input[type="checkbox"] {
+  vertical-align: middle;
+  width: 20px;
 }
 .product-accordion__menuTheme {
-  /* display: none; */
+  display: none;
+  margin-top: 20px;
 }
 .menuTheme-list {
   display: flex;
   flex-wrap: wrap;
 }
-
+.menuTheme-list li {
+  margin: 5px;
+}
 .product-content {
   position: relative;
 }
@@ -184,15 +242,55 @@ body {
   background: green;
 }
 .product-content__menuTab {
-  border: 1px solid #ddd;
+  display: flex;
   border-radius: 3px;
   color: #666;
+  margin: 40px 0 10px 0;
+}
+.product-content__menuTab li {
+  line-height: 26px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0 9px 0 25px;
+  margin-right: 15px;
+}
+.viewPhoto {
+  background: url(../images/icon_pic.png) no-repeat 8px;
+}
+.viewPhoto.active {
+  background: #666 url(../images/icon_pic_on.png) no-repeat 8px;
+}
+.viewIngredients {
+  background: url(../images/icon_ante.png) no-repeat 8px;
+}
+.viewIngredients.active {
+  background: #666 url(../images/icon_ante_on.png) no-repeat 8px;
+}
+.product-content__menuTab li.active a {
+  color: #fff;
 }
 .product-content__menuSelect {
   position: absolute;
   right: 0;
+  top: 0;
   width: 236px;
-  background: grey;
+}
+.product-content__menuSelect .menuSelect-btn {
+  width: 100%;
+  border-style: none;
+  font-size: 14px;
+  color: #444;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  height: 38px;
+  text-align: left;
+  padding: 0 10px;
+  overflow: hidden;
+  background: #fff url(../images/sbox_arrow_down.png) no-repeat right 10px;
+}
+.menuSelect-content {
+  display: none;
 }
 
 /* 제품 리스트 */

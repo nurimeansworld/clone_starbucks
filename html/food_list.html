@@ -40,7 +40,6 @@
             <input type="text" id="main-search" placeholder="통합검색">
             <button type="submit"></button>
           </form>
-          <a href="#" class="menu-side__layer">마이레이어열기</a>
         </div>
         <!-- GNB -->
         <ul class="menu-global">
@@ -92,11 +91,11 @@
         <article class="product-accordion">
           <!-- img background로 -->
           <h3 class="product-accordion__title">분류 보기</h3>
-          <button type="button" class="product-accordion__button"></button>
+          <button type="button" class="product-accordion__button"><img src="../images/list_up_btn.png" alt=""></button>
 
           <div class="product-accordion__menu">
             <section class="product-accordion__menuTab">
-              <button type="button">카테고리</button>
+              <button type="button" class="active">카테고리</button>
               <button type="button">테마</button>
             </section>
             <!-- 1. 카테고리 -->
@@ -132,8 +131,8 @@
           <section clalss="product-content__menu">
             <h4 class="sr-only">상세 분류 보기</h4>
             <ul class="product-content__menuTab">
-              <li><a href="#">사진으로 보기</a></li>
-              <li><a href="#">영양정보로 보기</a></li>
+              <li class="viewPhoto active"><a href="#">사진으로 보기</a></li>
+              <li class="viewIngredients"><a href="#">영양정보로 보기</a></li>
             </ul>
             <!-- CHECK:: article 보다 div. 단순 레이아웃 용이라면! -->
             <div class="product-content__menuSelect">
