@@ -110,7 +110,13 @@ body {
   height: 60px;
   color: #333;
 }
-
+.menu-global li:hover {
+  background: #2c2a29;
+}
+.menu-global li:hover a {
+  color: #669900;
+  text-decoration: underline;
+}
 /* main */
 .container {
   padding-top: 120px;
