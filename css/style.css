@@ -69,8 +69,17 @@ body {
   display: flex;
 }
 .menu-side__list li {
-  padding: 0 10px;
 }
+.menu-side__list li::after {
+  content: "|";
+  display: inline;
+  padding: 0 10px;
+  color: rgb(85 85 85 / 30%);
+}
+.menu-side__list li:last-child::after {
+  content: "";
+}
+
 .menu-side__list a {
   color: #555;
 }
@@ -156,6 +165,8 @@ body {
 
 .product-accordion {
   position: relative;
+  /* CHECK:: padding으로 전체를 감싸는게 좋다고 생각해서 저는 상하좌우 다 주었는데 아래는 안주신 분들도 계셔서 이유가 궁금합니다! */
+  /* SOLVE:: 버튼을 눌러서 display: none;하면 공간 값이 남아서 bottom을 주지 않음 */
   padding: 30px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -202,6 +213,7 @@ body {
   color: #fff;
 }
 /* CHECK:: 체크박스 스타일링 */
+/* CHECK:: 다들 체크박스 스타일링 어떻게 하실 생각이신지 궁금 ㅎㅎ */
 .product-accordion__menuCat {
   /* display: none; */
   /* NEW:: checkbox와 정렬 맞출 때 position: relative 사용해보기 */
@@ -211,6 +223,7 @@ body {
 .product-accordion__menuCat label {
   color: #3f4141;
   margin-right: 30px;
+  cursor: pointer;
 }
 .product-accordion__menuCat input[type="checkbox"] {
   vertical-align: middle;
@@ -408,6 +421,9 @@ body {
   line-height: 18px;
   border-right: 1px solid #393939;
   color: #ccc;
+}
+.footer-info__termsList li:last-child a {
+  border-right: none;
 }
 .footer-info__termsList li:first-child a {
   color: #00b050;
